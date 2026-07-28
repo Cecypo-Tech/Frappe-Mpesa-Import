@@ -86,7 +86,11 @@ app_license = "mit"
 # ------------
 
 # before_install = "frappe_mpesa_import.install.before_install"
-# after_install = "frappe_mpesa_import.install.after_install"
+after_install = "frappe_mpesa_import.setup.install.after_install"
+
+# Re-runs the (idempotent) role setup so existing sites pick up permission
+# changes without a reinstall.
+after_migrate = "frappe_mpesa_import.setup.install.after_migrate"
 
 # Uninstallation
 # ------------
@@ -255,4 +259,3 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

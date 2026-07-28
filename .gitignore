@@ -53,3 +53,10 @@ jspm_packages/
 
 # Aider AI Chat
 .aider*
+
+# M-Pesa statements contain customer names and partial phone numbers.
+# Never commit a real statement to this repo. The synthetic test fixture is
+# the only .xls that belongs here.
+*.xls
+*.xlsx
+!frappe_mpesa_import/tests/fixtures/sample_statement.xls

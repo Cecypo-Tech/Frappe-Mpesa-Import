@@ -9,6 +9,13 @@ readme = "README.md"
 dynamic = ["version"]
 dependencies = [
     # "frappe~=16.0.0" # Installed and managed by bench.
+    "xlrd>=2.0.1",  # reads the legacy OLE2 .xls that Safaricom's portal exports
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "xlwt>=1.3.0",  # only needed to regenerate the synthetic test fixture
 ]
 
 [build-system]
